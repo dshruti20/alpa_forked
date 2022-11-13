@@ -8,7 +8,9 @@ from transformers import AutoTokenizer
 from llm_serving.model.wrapper import get_model
 
 import ray
-ray.init(address='170.31.28.71:6001')
+ray.init(address='172.31.14.27:6001')
+ray_started=time.time()
+print("time to start ray cluster: ", ray_started)
 
 def main(args):
     start=time.time()
